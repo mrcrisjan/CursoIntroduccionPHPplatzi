@@ -71,5 +71,22 @@ y los 3 números más bajos de la siguiente lista: */
 
 $valores = [23, 54, 32, 67, 34, 78, 98, 56, 21, 34, 57, 92, 12, 5, 61];
 
+echo "<b>Los 3 números más grandes </b><br/>";
+$maxNum1 = max($valores);
+$maxNum2 = max(array_diff($valores, [$maxNum1]));
+$maxNum3 = max(array_diff($valores, [$maxNum1, $maxNum2]));
+echo "> $maxNum1 <br/>";
+echo "> $maxNum2 <br/>";
+echo "> $maxNum3 <br/><br/>";
 
+
+echo "<b>Los 3 números más pequeños </b><br/>";
+$minNum1 = min($valores);
+$minNum2 = min(array_diff($valores, [$minNum1]));
+$minNum3 = min(array_diff($valores, [$minNum1, $minNum2]));
+echo "> $minNum1 <br/>";
+echo "> $minNum2 <br/>";
+echo "> $minNum3 <br/><br/>";
+
+echo "<p>¡Hecho! :D</p>";
 ?>
