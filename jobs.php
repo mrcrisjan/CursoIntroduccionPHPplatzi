@@ -3,33 +3,62 @@
 class Job {
   private $title; //public quiere decir que esa variable se puede acceder publicamente
   public $description; //private 
-  public $visible;
+  public $visible = true;
   public $months;
 
+  public function __construct($title, $description) {
+    $this->setTitle($title);
+    $this->description = $description;
+  }
+
+// __construct es un metodo magico, averiguar acerca de los otros
+
   public function setTitle ($t) {
-    $this->title = $t;
+    if($t == '') {
+      $this->title = 'N/A';
+    } else {
+      $this->title = $t;
+    }
   }
 
   public function getTitle () {
     return $this->title;
   }
+
+  public function getDurationAsString() {
+    $years = floor($this->months / 12);
+    $extraMonths = $this->months % 12;
+  
+  
+    if ($years < 1) {
+      return "$extraMonths months";
+    }
+    else if ($extraMonths === 0) {
+      return "$years years";
+    }
+    else {
+      return "$years years and $extraMonths months";
+    }
+  }
+
 }
 
-$job1 = new Job();
-$job1->setTitle('PHP Developer');
-$job1->description = 'This is an awesome job for MrCrisjan';
-$job1->visible = 'true';
+$job1 = new Job('PHP Developer', 'This is an awesome job for MrCrisjan');
+// $job1->setTitle();
+// $job1->description = ;
 $job1->months = 16;
 
-$job2 = new Job();
-$job2->setTitle('Python Dev');
-$job2->description = 'This is a fantastic job';
-$job2->visible = 'true';
+$job2 = new Job('Python Dev', 'This is a fantastic job');
 $job2->months = 14;
+
+$job3 = new Job('Devops', 'This another jobsy');
+//$job3->visible = 'true';
+$job3->months = 32;
 
 $jobs = [
   $job1,
-  $job2
+  $job2,
+  $job3
 ];
 
 // $jobs = [
@@ -66,21 +95,22 @@ $jobs = [
 //   ];
 
 // no se puede declarar una funcion mas de una vez
-  function getDuration($months) {
-    $years = floor($months / 12);
-    $extraMonths = $months % 12;
+
+  // function getDuration($months) {
+  //   $years = floor($months / 12);
+  //   $extraMonths = $months % 12;
   
   
-    if ($years < 1) {
-      return "$extraMonths months";
-    }
-    else if ($extraMonths === 0) {
-      return "$years years";
-    }
-    else {
-      return "$years years and $extraMonths months";
-    }
-  };
+  //   if ($years < 1) {
+  //     return "$extraMonths months";
+  //   }
+  //   else if ($extraMonths === 0) {
+  //     return "$years years";
+  //   }
+  //   else {
+  //     return "$years years and $extraMonths months";
+  //   }
+  // };
   
   function printJob($job) {
     // if ($job['visible'] == false) {
@@ -92,7 +122,7 @@ $jobs = [
     echo   '<li class="work-position">';
     echo   '<h5>' . $job->getTitle() . '</h5>';
     echo   '<p>' . $job->description . '</p>';
-    echo   '<p>' . getDuration($job->months) . '</p>';
+    echo   '<p>' . $job->getDurationAsString() . '</p>';
    // echo   '<p>' . $totalMonths . '</p>';
     echo   '<strong>Achievements:</strong>';
     echo   '<ul>';
