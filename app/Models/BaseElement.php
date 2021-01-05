@@ -1,6 +1,8 @@
 <?php  /* Como solo contiene codigo de php, no hace falta cerrarlo */
 
-class BaseElement {
+require_once 'Printable.php';
+
+class BaseElement implements Printable {
     protected $title; //public quiere decir que esa variable se puede acceder publicamente
     public $description; //private 
     public $visible = true;
@@ -41,4 +43,7 @@ class BaseElement {
       }
     }
   
+    public function getDescription() {
+      return $this->description;
+  } 
   }
