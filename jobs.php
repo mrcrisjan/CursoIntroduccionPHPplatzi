@@ -1,12 +1,14 @@
 <?php
 
-require 'app/Models/Job.php';
-require 'app/Models/Project.php';
-require_once 'app/Models/Printable.php';
+require_once 'vendor/autoload.php';
 
-require 'lib1/Project.php';
+// require 'app/Models/Job.php';
+// require 'app/Models/Project.php';
+// require_once 'app/Models/Printable.php';
 
-use app\Models\{Job, Project, Printable};
+// require 'lib1/Project.php';
+
+use App\Models\{Job, Project, Printable};
 // use app\Models\Project;
 
 $job1 = new Job('PHP Developer', 'This is an awesome job for MrCrisjan');
@@ -23,7 +25,7 @@ $job3->months = 32;
 
 $project1 = new Project('Project 1', 'Description 1 for the project'); 
 
-$projectLib = new Lib1\Project();
+// $projectLib = new Lib1\Project();
 
 $jobs = [
   $job1,
