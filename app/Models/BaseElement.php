@@ -1,5 +1,7 @@
 <?php  /* Como solo contiene codigo de php, no hace falta cerrarlo */
 
+namespace app\Models;
+
 require_once 'Printable.php';
 
 class BaseElement implements Printable {
