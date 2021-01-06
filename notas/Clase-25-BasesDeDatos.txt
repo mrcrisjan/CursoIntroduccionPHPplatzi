@@ -1,0 +1,8 @@
+Son colecciones de datos que podemos usar en nuestros proyectos.
+
+Para desarrollo se llaman sistemas manejadores de bases de datos.
+
+1. Bases de datos relacionales
+información ubicada en tablas. podemos crear consultas para traer información a nuestro proyecto.
+
+PHPmyadmin es un cliente que nos permite conectarnos a la base de datos.
