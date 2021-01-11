@@ -1,0 +1,12 @@
+PDO (PHP Data Object)
+Permite estandarizar como trabajar con diferentes sistemas manejadores de bases de datos.
+
+(ORM) Object Relational Mapping
+
+Se crean unos objetos/modelos basados en las tablas que tenemos en la base de datos.
+
+Algo importante al usar un ORM es que se tiene una conexión más transparente con la base de datos de mySQL o PostgreSQL
+
+Proteccion contra las inyecciones de SQL u otros ataques.
+
+tambien sirve para hacer validaciones y formateos en las bases de datos.

@@ -1,0 +1,9 @@
+en PHP no hay un solo punto de entrada a la aplicación.
+
+Variables super globales: Son diferentes tipos de variables que existen en php y nos permiten acceder a ciertas partes.
+
+GET: Envía información mediante la URL. Peligroso para formularios, pero es útil para otros casos.
+
+POST: Envía de forma que no podemos verlos (en un segundo plano u "ocultos" al usuario).
+
+Así se pueden comunicar valores del cliente con el servidor.
