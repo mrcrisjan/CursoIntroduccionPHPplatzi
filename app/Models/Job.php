@@ -21,4 +21,4 @@ class Job extends Model {
 
         return "Job duration: $years years and $extraMonths months";
     }
-};
+}; 

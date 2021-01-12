@@ -32,13 +32,13 @@ use App\Models\{Job, Project};
 // ];
 
 $jobs = Job::all();  //metodo de eloquent. trae todos los registros que encuentre
+$projects = Project::all();
 
+// $project1 = new Project('Project 1', 'Description 1 for the project'); 
 
-$project1 = new Project('Project 1', 'Description 1 for the project'); 
-
-$projects = [
-  $project1,
-];
+// $projects = [
+//   $project1,
+// ];
 
 // $jobs = [
 //     [
