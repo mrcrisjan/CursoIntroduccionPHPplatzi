@@ -1,0 +1,3 @@
+la carpeta vendor no se debería subir al repositorio ya que se puede puede descargar con composer.
+
+ORM que sirve para enviar datos hacia la base de datos.
