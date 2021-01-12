@@ -1,0 +1,2 @@
+Listar registros de la base de datos con Eloquent
+

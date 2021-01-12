@@ -1,6 +1,6 @@
 <?php
 
-require_once 'vendor/autoload.php';
+// require_once 'vendor/autoload.php';
 
 // require 'app/Models/Job.php';
 // require 'app/Models/Project.php';
@@ -8,30 +8,33 @@ require_once 'vendor/autoload.php';
 
 // require 'lib1/Project.php';
 
-use App\Models\{Job, Project, Printable};
+use App\Models\{Job, Project};
 // use app\Models\Project;
 
-$job1 = new Job('PHP Developer', 'This is an awesome job for MrCrisjan');
-// $job1->setTitle();
-// $job1->description = ;
-$job1->months = 16;
+// $job1 = new Job('PHP Developer', 'This is an awesome job for MrCrisjan');  Lo borramos ya que lo vamos a traer de la base de datos.
+// // $job1->setTitle();
+// // $job1->description = ;
+// $job1->months = 16;
 
-$job2 = new Job('Python Dev', 'This is a fantastic job');
-$job2->months = 14;
+// $job2 = new Job('Python Dev', 'This is a fantastic job');
+// $job2->months = 14;
 
-$job3 = new Job('Devops', 'This another jobsy');
-//$job3->visible = 'true';
-$job3->months = 32;
-
-$project1 = new Project('Project 1', 'Description 1 for the project'); 
+// $job3 = new Job('Devops', 'This another jobsy');
+// //$job3->visible = 'true';
+// $job3->months = 32;
 
 // $projectLib = new Lib1\Project();
 
-$jobs = [
-  $job1,
-  $job2,
-  $job3
-];
+// $jobs = [
+//   $job1,
+//   $job2,
+//   $job3
+// ];
+
+$jobs = Job::all();  //metodo de eloquent. trae todos los registros que encuentre
+
+
+$project1 = new Project('Project 1', 'Description 1 for the project'); 
 
 $projects = [
   $project1,
@@ -88,16 +91,18 @@ $projects = [
   //   }
   // };
   
-  function printElement(Printable $job) {
+  function printElement($job) {
     // if ($job['visible'] == false) {
     //   return;
     // }
-    if ($job->visible == false) {
-      return;
-    }
+    // if ($job->visible == false) {
+    //   return;
+    // }
+
+
     echo   '<li class="work-position">';
-    echo   '<h5>' . $job->getTitle() . '</h5>';
-    echo   '<p>' . $job->getDescription() . '</p>';
+    echo   '<h5>' . $job->title . '</h5>';
+    echo   '<p>' . $job->description . '</p>';
     echo   '<p>' . $job->getDurationAsString() . '</p>';
    // echo   '<p>' . $totalMonths . '</p>';
     echo   '<strong>Achievements:</strong>';
