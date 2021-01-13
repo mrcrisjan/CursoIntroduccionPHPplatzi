@@ -1,2 +1,7 @@
 Listar registros de la base de datos con Eloquent
 
+en el terminal
+php -S localhost:8080
+para inicializar el servidor y correr el .twig
+
+abrir la URL con la ruta completa http
