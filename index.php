@@ -1,30 +1,10 @@
 <?php
 
-require_once 'vendor/autoload.php';
-
-use Illuminate\Database\Capsule\Manager as Capsule;
 use App\Models\{Job, Project};
 
-$capsule = new Capsule;
+require_once('jobs.php');
 
-$capsule->addConnection([
-    'driver'    => 'mysql',
-    'host'      => 'localhost',
-    'database'  => 'cursophp',
-    'username'  => 'root',
-    'password'  => '',
-    'charset'   => 'utf8',
-    'collation' => 'utf8_unicode_ci',
-    'prefix'    => '',
-]);
-
-// Make this Capsule instance available globally via static methods... (optional)
-$capsule->setAsGlobal();
-
-// Setup the Eloquent ORM... (optional; unless you've used setEventDispatcher())
-$capsule->bootEloquent();
-
-include('jobs.php'); /*Para llamar un archivo externo
+/*include('jobs.php'); Para llamar un archivo externo
 
 include, lo incluye si lo encuentra, y si no, entonces pone
 un warning
