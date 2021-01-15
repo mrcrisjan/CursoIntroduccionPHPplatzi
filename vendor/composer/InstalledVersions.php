@@ -29,7 +29,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '06a72f092c64d1adff5e289af2be365befdcc808',
+    'reference' => '54c7df461a1d7e0c46c9fb8359ba982d3bcf7346',
     'name' => '__root__',
   ),
   'versions' => 
@@ -41,7 +41,16 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '06a72f092c64d1adff5e289af2be365befdcc808',
+      'reference' => '54c7df461a1d7e0c46c9fb8359ba982d3bcf7346',
+    ),
+    'aura/router' => 
+    array (
+      'pretty_version' => '3.1.0',
+      'version' => '3.1.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '52507bc813c92511dbcacc7463f163ef5149ad38',
     ),
     'doctrine/inflector' => 
     array (
@@ -162,6 +171,15 @@ private static $installed = array (
       array (
         0 => '1.0',
       ),
+    ),
+    'psr/log' => 
+    array (
+      'pretty_version' => '1.1.3',
+      'version' => '1.1.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '0f73288fd15629204f9d42b7055f72dacbe811fc',
     ),
     'psr/log-implementation' => 
     array (
