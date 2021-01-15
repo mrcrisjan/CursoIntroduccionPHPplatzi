@@ -1,39 +1,3 @@
-<?php
-
-use App\Models\{Job, Project};
-
-require_once('jobs.php');
-
-/*include('jobs.php'); Para llamar un archivo externo
-
-include, lo incluye si lo encuentra, y si no, entonces pone
-un warning
-
-require, si no lo encuentra cancela la ejecucion del programa.
-error fatal
-
-require_once y include_once, obliga a que la llamada se haga una sola
-asi se repita varias veces la llamada en el codigo
-*/
-
-$name = 'Cristian Ladino';
-// $name = 'Cristian ' . $lastName;
-// $name2 = "Cristian $lastName"
-
-$limitMonths = 1000;
-
-// $jobs[0]['title']
-// var_dump($jobs);
-
-// $var1 = 1.9;
-// if($var1 > 2) {
-//   echo 'Es mayor que 2';
-// } else {
-//   echo "$var1 es menor que 2...";
-// }
-
-?>
-
 <!doctype html>
 <html lang="en">
 

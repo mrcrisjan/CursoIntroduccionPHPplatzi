@@ -1,44 +1,15 @@
 <?php
 
-// require_once 'vendor/autoload.php';
-
-// require 'app/Models/Job.php';
-// require 'app/Models/Project.php';
-// require_once 'app/Models/Printable.php';
-
-// require 'lib1/Project.php';
-
 use App\Models\{Job, Project};
-// use app\Models\Project;
-
-// $job1 = new Job('PHP Developer', 'This is an awesome job for MrCrisjan');  Lo borramos ya que lo vamos a traer de la base de datos.
-// // $job1->setTitle();
-// // $job1->description = ;
-// $job1->months = 16;
-
-// $job2 = new Job('Python Dev', 'This is a fantastic job');
-// $job2->months = 14;
-
-// $job3 = new Job('Devops', 'This another jobsy');
-// //$job3->visible = 'true';
-// $job3->months = 32;
-
-// $projectLib = new Lib1\Project();
-
-// $jobs = [
-//   $job1,
-//   $job2,
-//   $job3
-// ];
 
 $jobs = Job::all();  //metodo de eloquent. trae todos los registros que encuentre
 $projects = Project::all();
 
-// $project1 = new Project('Project 1', 'Description 1 for the project'); 
+$project1 = new Project('Project 1', 'Description 1 for the project'); 
 
-// $projects = [
-//   $project1,
-// ];
+$projects = [
+$project1,
+];
 
 // $jobs = [
 //     [

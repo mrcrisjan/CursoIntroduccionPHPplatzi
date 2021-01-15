@@ -1,19 +1,3 @@
-<?php
-
-use App\Models\Job;
-
-// var_dump($_GET);
-// var_dump($_POST);
-
-if (!empty($_POST)) {
-    $job = new Job();
-    $job->title = $_POST['title'];
-    $job->description = $_POST['description'];
-    $job->save();
-}
-
-?>
-
 <html>
     <head>
         <title>Add Job Form</title>
