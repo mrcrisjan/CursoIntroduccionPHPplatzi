@@ -1,0 +1,15 @@
+Clase 37 - Templates Engine
+Son motores para renderear nuestro HTML y sustituir las variables que estamos utilizando que queremos desplegar en ellos, y regresar
+una respuesta completamente lista con los datos organizados.
+
+PHP es un template engine en si.
+
+Para que usar un template engine en PHP?
+
+PHP fue pensado originalmente para ser un template engine pero con el paso del tiempo se ha ido desarrollando principalmente en las areas
+de la programación más que en el render del HTML. Es por esto que se han desarrollado algunas librerias como template engine para facilitar
+estos procesos.
+
+El template engine sirve para no mezclar el código de PHP y tener los archivos más organizados con archivos del frontend con el backend.
+
+XSS: Cross Site Scripting // Es una forma de ataque que puede afectar el sistema u a otros usuarios.
