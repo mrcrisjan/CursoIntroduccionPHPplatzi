@@ -16,3 +16,7 @@ XSS: Cross Site Scripting // Es una forma de ataque que puede afectar el sistema
 
 ////////////////
 Clase 38 - Twig
+
+//////////////////
+Clase 39 - Templates con Twig
+

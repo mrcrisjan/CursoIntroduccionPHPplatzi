@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Models\{Job, Project};
 
-class IndexController {
+class IndexController extends BaseController {
     public function indexAction() {
         
         $jobs = Job::all();  //metodo de eloquent. trae todos los registros que encuentre
@@ -13,6 +13,10 @@ class IndexController {
         $name = 'Cristian Ladino';
         $limitMonths = 1000;
 
-        include '../views/index.php';
+        return $this->renderHTML('index.twig', [
+            'name' => $name,
+            'jobs' => $jobs,
+        ]);
+        // include '../views/index.php';
     }
 }
