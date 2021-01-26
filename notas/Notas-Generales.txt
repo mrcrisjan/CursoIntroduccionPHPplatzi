@@ -13,3 +13,6 @@ estos procesos.
 El template engine sirve para no mezclar el código de PHP y tener los archivos más organizados con archivos del frontend con el backend.
 
 XSS: Cross Site Scripting // Es una forma de ataque que puede afectar el sistema u a otros usuarios.
+
+////////////////
+Clase 38 - Twig
