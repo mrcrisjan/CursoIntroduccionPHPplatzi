@@ -9,7 +9,6 @@ require_once '../vendor/autoload.php';
 use Illuminate\Database\Capsule\Manager as Capsule;
 use Aura\Router\RouterContainer;
 
-
 $capsule = new Capsule;
 
 $capsule->addConnection([
@@ -25,7 +24,6 @@ $capsule->addConnection([
 
 // Make this Capsule instance available globally via static methods... (optional)
 $capsule->setAsGlobal();
-
 // Setup the Eloquent ORM... (optional; unless you've used setEventDispatcher())
 $capsule->bootEloquent();
 
@@ -43,6 +41,8 @@ $map->get('index', '/cursophp/', [
     'controller' => 'App\Controllers\IndexController',
     'action' => 'indexAction'
 ]);
+
+
 $map->get('addJobs', '/cursophp/jobs/add', [
     'controller' => 'App\Controllers\JobsController',
     'action' => 'getAddJobAction'
@@ -55,7 +55,7 @@ $map->post('saveJobs', '/cursophp/jobs/add', [
 $matcher = $routerContainer->getMatcher();
 $route = $matcher->match($request);
 
-function printElement($job) {
+function printElementJob($job) {
     echo   '<li class="work-position">';
     echo   '<h5>' . $job->title . '</h5>';
     echo   '<p>' . $job->description . '</p>';
@@ -70,6 +70,33 @@ function printElement($job) {
     echo   '</li>';
   };
 
+  // test starts
+
+  $map->get('addProjects', '/cursophp/projects/add', [
+      'controller' => 'App\Controllers\ProjectsController',
+      'action' => 'getAddProjectAction'
+  ]);
+  $map->post('saveProjects', '/cursophp/projects/add', [
+      'controller' => 'App\Controllers\ProjectsController',
+      'action' => 'getAddProjectAction'
+  ]);
+  
+  function printElementProject($project) {
+      echo   '<li class="work-position">';
+      echo   '<h5>' . $project->title . '</h5>';
+      echo   '<p>' . $project->description . '</p>';
+      echo   '<p>' . $project->getDurationAsString() . '</p>';
+     // echo   '<p>' . $totalMonths . '</p>';
+      echo   '<strong>Achievements:</strong>';
+      echo   '<ul>';
+      echo   '<li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>';
+      echo   '<li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>';
+      echo   '<li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>';
+      echo   '</ul>';
+      echo   '</li>';
+    };
+
+  // test finishes
 
 if (!route) {
     echo 'no route';
