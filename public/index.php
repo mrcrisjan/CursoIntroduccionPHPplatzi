@@ -36,12 +36,13 @@ $request = Zend\Diactoros\ServerRequestFactory::fromGlobals(
 );
 
 $routerContainer = new RouterContainer();
+
+
 $map = $routerContainer->getMap();
 $map->get('index', '/cursophp/', [
     'controller' => 'App\Controllers\IndexController',
     'action' => 'indexAction'
 ]);
-
 
 $map->get('addJobs', '/cursophp/jobs/add', [
     'controller' => 'App\Controllers\JobsController',

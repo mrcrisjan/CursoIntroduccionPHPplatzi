@@ -20,3 +20,5 @@ Clase 38 - Twig
 //////////////////
 Clase 39 - Templates con Twig
 
+/////////////////
+Clase 41 - Validaciones
