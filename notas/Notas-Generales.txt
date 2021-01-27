@@ -22,3 +22,9 @@ Clase 39 - Templates con Twig
 
 /////////////////
 Clase 41 - Validaciones
+//////////
+Clase 42 - Ejemplo de subida de archivos
+
+enctype="multipart/form-data"
+
+se tiene que usar lo de arriba al usar el input type file.
