@@ -53,9 +53,6 @@ $map->post('saveJobs', '/cursophp/jobs/add', [
     'action' => 'getAddJobAction'
 ]);
 
-$matcher = $routerContainer->getMatcher();
-$route = $matcher->match($request);
-
 function printElementJob($job) {
     echo   '<li class="work-position">';
     echo   '<h5>' . $job->title . '</h5>';
@@ -99,6 +96,20 @@ function printElementJob($job) {
 
   // test finishes
 
+// users route starts
+$map->get('addUsers', '/cursophp/users/add', [
+    'controller' => 'App\Controllers\UsersController',
+    'action' => 'getAddUserAction'
+]);
+$map->post('saveUsers', '/cursophp/users/add', [
+    'controller' => 'App\Controllers\UsersController',
+    'action' => 'getAddUserAction'
+]);
+// users route finishes
+
+$matcher = $routerContainer->getMatcher();
+$route = $matcher->match($request);
+
 if (!route) {
     echo 'no route';
 } else {
@@ -111,15 +122,3 @@ if (!route) {
 
     echo $response->getBody();
 }
-
-// var_dump($route->handler);
-
-/*
-$route = $_GET['route'] ?? '/'; // ?? si está definido y si tiene un valor
-
-if ($route == '/') {
-    require '../index.php';
-} elseif ($route == 'addJob') {
-    require '../addJob.php';
-}
-*/
