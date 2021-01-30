@@ -6,6 +6,8 @@ error_reporting(E_ALL);
 
 require_once '../vendor/autoload.php';
 
+session_start();
+
 use Illuminate\Database\Capsule\Manager as Capsule;
 use Aura\Router\RouterContainer;
 
@@ -46,7 +48,8 @@ $map->get('index', '/cursophp/', [
 
 $map->get('addJobs', '/cursophp/jobs/add', [
     'controller' => 'App\Controllers\JobsController',
-    'action' => 'getAddJobAction'
+    'action' => 'getAddJobAction',
+    'auth' => true
 ]);
 $map->post('saveJobs', '/cursophp/jobs/add', [
     'controller' => 'App\Controllers\JobsController',
@@ -72,7 +75,8 @@ function printElementJob($job) {
 
   $map->get('addProjects', '/cursophp/projects/add', [
       'controller' => 'App\Controllers\ProjectsController',
-      'action' => 'getAddProjectAction'
+      'action' => 'getAddProjectAction',
+      'auth' => true
   ]);
   $map->post('saveProjects', '/cursophp/projects/add', [
       'controller' => 'App\Controllers\ProjectsController',
@@ -99,7 +103,8 @@ function printElementJob($job) {
 // users route starts
 $map->get('addUsers', '/cursophp/users/add', [
     'controller' => 'App\Controllers\UsersController',
-    'action' => 'getAddUserAction'
+    'action' => 'getAddUserAction',
+    'auth' => true
 ]);
 $map->post('saveUsers', '/cursophp/users/add', [
     'controller' => 'App\Controllers\UsersController',
@@ -112,12 +117,21 @@ $map->get('loginForm', '/cursophp/login', [
     'controller' => 'App\Controllers\AuthController',
     'action' => 'getLogin'
 ]);
+$map->get('logout', '/cursophp/logout', [
+    'controller' => 'App\Controllers\AuthController',
+    'action' => 'getLogout'
+]);
 $map->post('auth', '/cursophp/auth', [
     'controller' => 'App\Controllers\AuthController',
     'action' => 'postLogin'
-]);
-//
-
+    ]);
+    //
+    $map->get('admin', '/cursophp/admin', [
+        'controller' => 'App\Controllers\AdminController',
+        'action' => 'getIndex',
+        'auth' => true
+    ]);
+    
 $matcher = $routerContainer->getMatcher();
 $route = $matcher->match($request);
 
@@ -127,6 +141,13 @@ if (!route) {
     $handlerData = $route->handler;
     $controllerName = $handlerData['controller'];
     $actionName = $handlerData['action'];
+    $needsAuth = $handlerData['auth'] ?? false;
+
+    $sessionUserId = $_SESSION['userId'] ?? null;
+    if ($needsAuth && !$sessionUserId) {
+        echo 'Protected route. Please <strong><a href="/cursophp/login">login</a></strong>';
+        die;
+    }
 
     $controller = new $controllerName;
     $response = $controller->$actionName($request);
