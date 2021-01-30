@@ -29,7 +29,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '754e959a2a3748fd151ded252b8157fefb7edcee',
+    'reference' => '5643bcc012e07f4d522b88cae4844fd73768a87e',
     'name' => '__root__',
   ),
   'versions' => 
@@ -41,7 +41,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '754e959a2a3748fd151ded252b8157fefb7edcee',
+      'reference' => '5643bcc012e07f4d522b88cae4844fd73768a87e',
     ),
     'aura/router' => 
     array (
@@ -60,6 +60,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '9cf661f4eb38f7c881cac67c75ea9b00bf97b210',
+    ),
+    'graham-campbell/result-type' => 
+    array (
+      'pretty_version' => 'v1.0.1',
+      'version' => '1.0.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '7e279d2cd5d7fbb156ce46daada972355cea27bb',
     ),
     'illuminate/collections' => 
     array (
@@ -123,6 +132,15 @@ private static $installed = array (
       array (
       ),
       'reference' => 'd32c57d8389113742f4a88725a170236470012e2',
+    ),
+    'phpoption/phpoption' => 
+    array (
+      'pretty_version' => '1.7.5',
+      'version' => '1.7.5.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '994ecccd8f3283ecf5ac33254543eb0ac946d525',
     ),
     'psr/container' => 
     array (
@@ -329,6 +347,15 @@ private static $installed = array (
       array (
       ),
       'reference' => 'f795ca686d38530045859b0350b5352f7d63447d',
+    ),
+    'vlucas/phpdotenv' => 
+    array (
+      'pretty_version' => 'v5.3.0',
+      'version' => '5.3.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'b3eac5c7ac896e52deab4a99068e3f4ab12d9e56',
     ),
     'voku/portable-ascii' => 
     array (
