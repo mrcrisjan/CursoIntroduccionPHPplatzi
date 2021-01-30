@@ -1,0 +1,14 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<h1>Login to the awesome Portfolio!</h1>
+<form action="../auth" method="post">
+    <label for="">Email:</label>
+    <input type="text" name="email" placeholder="email@email.com"><br>
+    <label for="">Password:</label>
+    <input type="password" name="password" placeholder="Type your password"><br>
+    <button type="submit">Login</button>
+</form>
+
+{% endblock %}

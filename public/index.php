@@ -107,6 +107,17 @@ $map->post('saveUsers', '/cursophp/users/add', [
 ]);
 // users route finishes
 
+// user login
+$map->get('loginForm', '/cursophp/login', [
+    'controller' => 'App\Controllers\AuthController',
+    'action' => 'getLogin'
+]);
+$map->post('auth', '/cursophp/auth', [
+    'controller' => 'App\Controllers\AuthController',
+    'action' => 'postLogin'
+]);
+//
+
 $matcher = $routerContainer->getMatcher();
 $route = $matcher->match($request);
 
