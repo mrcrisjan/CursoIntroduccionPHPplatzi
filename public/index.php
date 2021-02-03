@@ -44,17 +44,17 @@ $routerContainer = new RouterContainer();
 
 
 $map = $routerContainer->getMap();
-$map->get('index', '/cursophp/', [
+$map->get('index', '/', [
     'controller' => 'App\Controllers\IndexController',
     'action' => 'indexAction'
 ]);
 
-$map->get('addJobs', '/cursophp/jobs/add', [
+$map->get('addJobs', '/jobs/add', [
     'controller' => 'App\Controllers\JobsController',
     'action' => 'getAddJobAction',
     'auth' => true
 ]);
-$map->post('saveJobs', '/cursophp/jobs/add', [
+$map->post('saveJobs', '/jobs/add', [
     'controller' => 'App\Controllers\JobsController',
     'action' => 'getAddJobAction'
 ]);
@@ -76,12 +76,12 @@ function printElementJob($job) {
 
   // test starts
 
-  $map->get('addProjects', '/cursophp/projects/add', [
+  $map->get('addProjects', '/projects/add', [
       'controller' => 'App\Controllers\ProjectsController',
       'action' => 'getAddProjectAction',
       'auth' => true
   ]);
-  $map->post('saveProjects', '/cursophp/projects/add', [
+  $map->post('saveProjects', '/projects/add', [
       'controller' => 'App\Controllers\ProjectsController',
       'action' => 'getAddProjectAction'
   ]);
@@ -104,32 +104,32 @@ function printElementJob($job) {
   // test finishes
 
 // users route starts
-$map->get('addUsers', '/cursophp/users/add', [
+$map->get('addUsers', '/users/add', [
     'controller' => 'App\Controllers\UsersController',
     'action' => 'getAddUserAction',
     'auth' => true
 ]);
-$map->post('saveUsers', '/cursophp/users/add', [
+$map->post('saveUsers', '/users/add', [
     'controller' => 'App\Controllers\UsersController',
     'action' => 'getAddUserAction'
 ]);
 // users route finishes
 
 // user login
-$map->get('loginForm', '/cursophp/login', [
+$map->get('loginForm', '/login', [
     'controller' => 'App\Controllers\AuthController',
     'action' => 'getLogin'
 ]);
-$map->get('logout', '/cursophp/logout', [
+$map->get('logout', '/logout', [
     'controller' => 'App\Controllers\AuthController',
     'action' => 'getLogout'
 ]);
-$map->post('auth', '/cursophp/auth', [
+$map->post('auth', '/auth', [
     'controller' => 'App\Controllers\AuthController',
     'action' => 'postLogin'
     ]);
     //
-    $map->get('admin', '/cursophp/admin', [
+    $map->get('admin', '/admin', [
         'controller' => 'App\Controllers\AdminController',
         'action' => 'getIndex',
         'auth' => true
@@ -148,7 +148,7 @@ if (!route) {
 
     $sessionUserId = $_SESSION['userId'] ?? null;
     if ($needsAuth && !$sessionUserId) {
-        echo 'Protected route. Please <strong><a href="/cursophp/login">login</a></strong>';
+        echo 'Protected route. Please <strong><a href="/login">login</a></strong>';
         die;
     }
 

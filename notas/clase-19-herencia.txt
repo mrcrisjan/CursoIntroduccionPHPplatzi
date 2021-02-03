@@ -1,8 +1,0 @@
-Herencia: Es uno de los pilares de la programacion orientada a objetos.
- Permite que determinadas clases hereden los valores de una clase "padre"
- 
-carpeta "models": se usa normalmene para crear modelos que puedan heredar caracteristicas a otras clases
-
-Es mejor crear carpetas con contenidos divididos. Es una buena practica pensando en futuros programadores o nosotros mismos.
-
-Polimorfismo: Metodo que va a funcionar segun el contexto en el cual es llamado.

@@ -1,8 +1,0 @@
-https://getcomposer.org/
-
-Es un manejador de dependencias.
-
-Nos permite manejar y administrar las librerias que tengamos de un tercero.
-composer requiere usar un archivo composer.json para que pueda funcionar.
-
-los archivos .phar son archivos de un empaquetado completo hecho en php.

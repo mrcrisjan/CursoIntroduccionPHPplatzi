@@ -1,7 +1,0 @@
-Especie de contrato / acuerdo, en el cual queremos estandarizar el uso de ciertas cosas.
-
-implements >>  Quiero que esta clase implemente esta interfaz
-
-* se pueden implementar varias interfaces en una clase.
-
-las interfaces se pueden compartir publicamente con otros desarrolladores para que las puedan implementar en sus propias aplicaciones.
