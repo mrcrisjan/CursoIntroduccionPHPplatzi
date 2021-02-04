@@ -1,6 +1,6 @@
 <?php
 
-ini_set('display_errors', 1);
+ini_set('display_errors', 0);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
@@ -107,7 +107,6 @@ function printElementJob($job) {
 $map->get('addUsers', '/users/add', [
     'controller' => 'App\Controllers\UsersController',
     'action' => 'getAddUserAction',
-    'auth' => true
 ]);
 $map->post('saveUsers', '/users/add', [
     'controller' => 'App\Controllers\UsersController',
